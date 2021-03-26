@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { ArtistListComponent } from './artists/artist-list/artist-list.component';
 import { ArtistDetailComponent } from './artists/artist-detail/artist-detail.component';
 import { PlaylistListComponent } from './playlists/playlist-list/playlist-list.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistListComponent,
     ArtistDetailComponent,
-    PlaylistListComponent
+    PlaylistListComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
