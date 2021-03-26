@@ -29,10 +29,9 @@ export class ArtistDetailComponent implements OnInit {
     this.getSongs();
   }
 
-  getSongs(): void {
+  async getSongs(): Promise<void> {
     if(this.artistId) {
-      this.artistService.getArtist(+this.artistId)
-      .subscribe(artist => this.artist = artist);
+      this.artist = await this.artistService.getArtist(+this.artistId).toPromise();
     }
     if(this.artist) {
       this.songService.getSongsForArtist(this.artist.name)
