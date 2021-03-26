@@ -1,0 +1,12 @@
+<div class="container text-center">
+    <div class="container">
+        <div class="search-field">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search for an artist">
+        </div>
+        <div class="list-container">
+            <div class="list-button-div" *ngFor="let artist of artists | filter:searchText">
+                <a class="list-button" routerLink="/artist/{{artist.id}}">{{artist.name}}</a>
+            </div>
+        </div>
+    </div>
+</div>
