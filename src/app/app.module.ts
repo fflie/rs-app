@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArtistListComponent } from './artists/artist-list/artist-list.component';
+import { ArtistDetailComponent } from './artists/artist-detail/artist-detail.component';
 import { PlaylistListComponent } from './playlists/playlist-list/playlist-list.component';
-
-// search module
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistListComponent,
+    ArtistDetailComponent,
     PlaylistListComponent
   ],
   imports: [

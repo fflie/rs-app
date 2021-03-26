@@ -1,0 +1,6 @@
+<div *ngIf="artist">
+    <h2>{{artist.name}}</h2>
+    <div class="list-div" *ngFor="let song of songs">
+        <a class="list">{{song.name}}</a>
+    </div>
+</div>
