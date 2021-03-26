@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+.button-div {
+    display: inline-block;
+    overflow: hidden;
+    width: 50%;
+}
+
+.button {
+    background: $rs-white;
+    display: inline-block;
+    cursor: pointer;
+    color: $rs-black;
+    font-weight: bold;
+    margin: $margin;
+    padding: $padding;
+    text-decoration: none;  
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+}
+
+.activeButton {
+    background: $rs-yellow;
+}
+
+* {
+    background-color: $rs-gray;
+    color: $rs-white;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}

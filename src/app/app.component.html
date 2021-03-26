@@ -1,7 +1,12 @@
 
-<nav>
-  <a class="button" routerLink="/artists-list">Artists</a> |
-  <a class="button" routerLink="/playlists-list">Playlists</a>
-</nav>
-
-<router-outlet></router-outlet>
+<div class="container">
+  <nav>
+    <div class="button-div">
+      <a class="button" routerLinkActive="activeButton" routerLink="/artists-list">Artists</a>
+    </div>
+   <div class="button-div">
+      <a class="button" routerLinkActive="activeButton" routerLink="/playlists-list">Playlists</a>
+   </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
