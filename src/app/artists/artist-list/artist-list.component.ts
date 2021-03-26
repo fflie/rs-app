@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Artist } from '../../shared/models/artist.model';
+import { ArtistService } from '../../shared/services/artist.service';
 
 @Component({
   selector: 'app-artist-list',
@@ -6,23 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artist-list.component.scss']
 })
 export class ArtistListComponent implements OnInit {
-  searchText = '';
-  artists = [
-    { id: 11, name: 'Mr. Nice'},
-    { id: 12, name: 'Narco'},
-    { id: 13, name: 'Bombasto'},
-    { id: 14, name: 'Celeritas'},
-    { id: 15, name: 'Magneta'},
-    { id: 16, name: 'RubberMan'},
-    { id: 17, name: 'Dynama'},
-    { id: 18, name: 'Dr IQ'},
-    { id: 19, name: 'Magma'},
-    { id: 20, name: 'Tornado'}
-  ];
+  searchText;
+  artists: Artist[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private artistService: ArtistService) { 
+    this.searchText = '';
+    this.artists = [];
   }
 
+  ngOnInit(): void {
+    this.getArtists();
+  }
+
+  getArtists(): void {
+    this.artistService.getArtists()
+      .subscribe(artists => this.artists = artists)
+  }
 }
